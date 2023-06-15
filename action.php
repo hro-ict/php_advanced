@@ -3,9 +3,11 @@
 session_start();
 
 // Include and initialize DB class
-require_once 'DB_class.php';
-use DB_namespace\DB;
+//require_once 'DB_class.php';
+//use DB_namespace\DB;
 
+require realpath('vendor/autoload.php');
+use DB_namespace\DB;
 $db = new DB();
 
 // Database table name
@@ -13,7 +15,7 @@ $tblName = 'users';
 
 $postData = $statusMsg = $valErr = '';
 $status = 'danger';
-$redirectURL = 'index.php';
+$redirectURL = 'admin.php';
 
 // If Add request is submitted
 if(!empty($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'add'){
@@ -51,7 +53,7 @@ if(!empty($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'add'){
             $statusMsg = 'User data has been added successfully!';
             $postData = '';
 
-            $redirectURL = 'index.php';
+            $redirectURL = 'admin.php';
         }else{
             $statusMsg = 'Something went wrong, please try again after some time.';
         }
@@ -100,7 +102,7 @@ if(!empty($_REQUEST['action_type']) && $_REQUEST['action_type'] == 'add'){
             $statusMsg = 'User data has been updated successfully!';
             $postData = '';
 
-            $redirectURL = 'index.php';
+            $redirectURL = 'admin.php';
         }else{
             $statusMsg = 'Something went wrong, please try again after some time.';
         }
