@@ -15,7 +15,7 @@ if(!empty($sessData['status']['msg'])){
 }
 
 // Include and initialize DB class
-require_once 'DB_class.php';
+//require_once 'DB_class.php';
 use DB_namespace\DB;
 
 $db = new DB();
