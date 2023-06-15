@@ -34,7 +34,7 @@ if(!empty($sessData['postData'])){
 
         <!-- Back link -->
         <div class="float-right">
-            <a href="index.php" class="btn btn-success"><i class="back"></i> Back</a>
+            <a href="admin.php" class="btn btn-success"><i class="back"></i> Back</a>
         </div>
     </div>
 
