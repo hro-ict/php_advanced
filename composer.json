@@ -1,9 +1,0 @@
-{
-  "autoload": {
-    "files": [
-      "./header.php", "src/DB_class.php", "src/Login_class.php", "src/Mail_class.php"
-    ]
-  }
-}
-
-
